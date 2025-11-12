@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASYL CATERING</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://ugc.production.linktr.ee/537a58f3-fbd1-411f-82a2-eee46d77b587_Functions---Catering.png" alt="ASYL CATERING">
+                <div>
+                    <div class="logo-text">ASYL CATERING</div>
+                    <div class="logo-subtext">Дәстүрлі және заманауи асхана</div>
+                </div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#breakfast">Завтраки</a></li>
+                    <li><a href="#extras">Экстра</a></li>
+                    <li><a href="#bakery">Выпечка</a></li>
+                    <li><a href="#soups">Супы</a></li>
+                    <li><a href="#mains">Основные блюда</a></li>
+                    <li><a href="#desserts">Десерты</a></li>
+                    <li><a href="#drinks">Напитки</a></li>
+                </ul>
+            </nav>
+            
+            <div class="burger-menu" id="burgerMenu">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#breakfast">Завтраки</a></li>
+            <li><a href="#extras">Экстра</a></li>
+            <li><a href="#bakery">Выпечка</a></li>
+            <li><a href="#soups">Супы</a></li>
+            <li><a href="#mains">Основные блюда</a></li>
+            <li><a href="#desserts">Десерты</a></li>
+            <li><a href="#drinks">Напитки</a></li>
+        </ul>
+    </div>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- WhatsApp Modal -->
+    <div class="whatsapp-modal" id="whatsappModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <h3 class="modal-title">Перейти в WhatsApp</h3>
+            <p class="modal-text" id="modalText">Вы будете перенаправлены в WhatsApp для оформления заказа</p>
+            <div class="modal-buttons">
+                <button class="modal-btn cancel" id="cancelOrder">Отмена</button>
+                <button class="modal-btn confirm" id="confirmOrder">Перейти</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to top button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <section class="welcome-section">
+        <div class="welcome-container">
+            <h1 class="welcome-title animate-fade-in-up">ASYL CATERING</h1>
+            <h2 class="welcome-subtitle animate-fade-in-up" style="animation-delay: 0.2s">Қош келдіңіздер!</h2>
+            <p class="welcome-text animate-fade-in-up" style="animation-delay: 0.4s">
+                Әрбір тағам — бұл шынайы махаббат пен сапаның үйлесімі.
+                Біздің мәзірде сіз дәстүрлі және заманауи асхананың ең үздік тағамдарын таба аласыз.
+            </p>
+            <p class="welcome-text animate-fade-in-up" style="animation-delay: 0.6s">
+                Каждое блюдо — это гармония истинной любви и качества.
+                В нашем меню вы найдете лучшие блюда традиционной и современной кухни.
+            </p>
+        </div>
+    </section>
+
+  <!-- Завтраки -->
+    <section class="menu-section" id="breakfast">
+        <h2 class="section-title animate-slide-in-left">Завтраки</h2>
+        
+        <div class="category-filters">
+            <button class="filter-btn active" data-filter="all">Все</button>
+            <button class="filter-btn" data-filter="turkish">Турецкие</button>
+            <button class="filter-btn" data-filter="toast">Тосты</button>
+        </div>
+        
+        <div class="menu-grid stagger-animation">
+            <!-- Завтрак 1 -->
+            <div class="menu-item" data-category="turkish">
+                <img src="https://mm-g.ru/upload/iblock/a96/a96ccf2c6a3ddb6f8b9b945bf7473659.jpg" alt="Турецкий завтрак" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Турецкий завтрак</h3>
+                        <div class="item-price">2250тг</div>
+                    </div>
+                    <p class="item-description">Классический турецкий завтрак с разнообразными закусками</p>
+                    <p class="item-ingredients">Жареное яйцо, сметана, варенье, сливочное масло, мед, сыр, брынза, помидоры, огурцы, хлеб, чай</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Турецкий завтрак" data-price="2250">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Завтрак 2 -->
+            <div class="menu-item" data-category="turkish">
+                <img src="./images/turkish.jpeg" alt="Турецкий завтрак Премиум" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Турецкий завтрак Премиум</h3>
+                        <div class="item-price">2400тг</div>
+                    </div>
+                    <p class="item-description">Расширенная версия турецкого завтрака с дополнительными блюдами</p>
+                    <p class="item-ingredients">Жареное или вареное яйцо, сметана, варенье, сырники, сыр, брынза, помидоры, огурцы, хлеб, чай</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Турецкий завтрак Премиум" data-price="2400">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Завтрак 3 -->
+            <div class="menu-item" data-category="toast">
+                <img src="https://img.freepik.com/premium-photo/fried-toasts-stuffed-with-sausage-cheese-greens-inside-bowl_230573-522.jpg" alt="Тосты" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Тосты</h3>
+                        <div class="item-price">от 450тг</div>
+                    </div>
+                    <p class="item-description">Ароматные горячие тосты с различными начинками</p>
+                    <p class="item-ingredients">Тост с сыром - 520тг, Тост с колбасой - 450тг, Тост с мясом - 700тг</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Тосты" data-price="450">Заказать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Экстра -->
+    <section class="menu-section" id="extras">
+        <h2 class="section-title animate-slide-in-left">Экстра</h2>
+        
+        <div class="menu-grid stagger-animation">
+            <!-- Менемен -->
+            <div class="menu-item">
+                <img src="./images/менемен.webp" alt="Менемен" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Менемен</h3>
+                        <div class="item-price">600тг</div>
+                    </div>
+                    <p class="item-description">Турецкое блюдо из яиц с овощами и специями</p>
+                    <p class="item-ingredients">Яйца, помидоры, перец, лук, специи</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Менемен" data-price="600">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Картофель фри -->
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/736x/4f/de/be/4fdebe97f81419061ff1ed0614ea2c9e.jpg" alt="Картофель фри" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Картофель фри</h3>
+                        <div class="item-price">600тг</div>
+                    </div>
+                    <p class="item-description">Хрустящий картофель фри с соусами</p>
+                    <p class="item-ingredients">Картофель, растительное масло, соль</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Картофель фри" data-price="600">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Сигара Борек -->
+            <div class="menu-item">
+                <img src="https://food.pibig.info/uploads/posts/2023-03/1678970741_food-pibig-info-p-berek-blyudo-krasivo-2.jpg" alt="Сигара Борек" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Сигара Борек</h3>
+                        <div class="item-price">1шт - 120тг</div>
+                    </div>
+                    <p class="item-description">Турецкие рулетики из тонкого теста с начинкой</p>
+                    <p class="item-ingredients">Тонкое тесто, сыр, зелень, специи</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Сигара Борек (1шт)" data-price="120">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Сырники -->
+            <div class="menu-item">
+                <img src="https://img.gazeta.ru/files3/791/14219791/upload-Depositphotos_333628626_XL-pic_32ratio_900x600-900x600-1449.jpg" alt="Сырники" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Сырники</h3>
+                        <div class="item-price">1шт - 170тг</div>
+                    </div>
+                    <p class="item-description">Нежные творожные сырники с джемом или сметаной</p>
+                    <p class="item-ingredients">Творог, яйца, мука, сахар, ванилин</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Сырники (1шт)" data-price="170">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Гозлеме с Сыром -->
+            <div class="menu-item">
+                <img src="https://img.freepik.com/premium-photo/traditional-turkish-food-turkish-pancake-gozleme-with-cheese-herb-appetizer-is-turkish-pastry-there-are-varieties-such-as-cheese-spinach-potato_693630-6691.jpg" alt="Гозлеме с Сыром" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Гозлеме с Сыром</h3>
+                        <div class="item-price">1шт - 200тг</div>
+                    </div>
+                    <p class="item-description">Турецкие лепешки с сырной начинкой</p>
+                    <p class="item-ingredients">Тонкое тесто, сыр, зелень, специи</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Гозлеме с Сыром (1шт)" data-price="200">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Жареная Картошка с Яйцом -->
+            <div class="menu-item">
+                <img src="https://cdn.gelenhaberler.com/uploads/1280x720/images/202307/image_1200x_64ae7294296ed.jpg" alt="Жареная Картошка с Яйцом" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Жареная Картошка с Яйцом</h3>
+                        <div class="item-price">200тг</div>
+                    </div>
+                    <p class="item-description">Ароматная жареная картошка с яичницей</p>
+                    <p class="item-ingredients">Картофель, яйца, лук, специи, масло</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Жареная Картошка с Яйцом" data-price="200">Заказать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Выпечка -->
+    <section class="menu-section" id="bakery">
+        <h2 class="section-title animate-slide-in-left">Выпечка</h2>
+        
+        <div class="menu-grid stagger-animation">
+            <!-- Поача -->
+            <div class="menu-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmFPhDWcsOB50hZEYkgrOs2IpRmv56U05UMw&s" alt="Поача" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Поача</h3>
+                        <div class="item-price">180тг</div>
+                    </div>
+                    <p class="item-description">Турецкие булочки с различными начинками</p>
+                    <p class="item-ingredients">Мука, дрожжи, вода, соль, начинка</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Поача" data-price="180">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ачма -->
+            <div class="menu-item">
+                <img src="https://www.povarenok.ru/data/cache/2020jan/22/14/2657200_28860-710x550x.jpg" alt="Ачма" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Ачма</h3>
+                        <div class="item-price">180тг</div>
+                    </div>
+                    <p class="item-description">Слоеное турецкое блюдо из теста с сыром</p>
+                    <p class="item-ingredients">Слоеное тесто, сыр, яйца, молоко</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Ачма" data-price="180">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Борек -->
+            <div class="menu-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6hq5gXxhTRrUBqqQ2uitq0eCV9UrMy87Egw&s" alt="Борек" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Борек</h3>
+                        <div class="item-price">200тг</div>
+                    </div>
+                    <p class="item-description">Турецкие пирожки из тонкого теста</p>
+                    <p class="item-ingredients">Тонкое тесто, начинка (сыр, мясо, картофель)</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Борек" data-price="200">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Самса -->
+            <div class="menu-item">
+                <img src="https://myastoriya.com.ua/upload/resize_cache/iblock/8b2/1000_800_1/i0e7gmbi7vc15c1tizjde2zxvfvi9vam.jpg" alt="Самса" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Самса</h3>
+                        <div class="item-price">250тг</div>
+                    </div>
+                    <p class="item-description">Восточные пирожки с различными начинками</p>
+                    <p class="item-ingredients">Самса с сыром - 250тг, Самса с курицей - 250тг, Самса с мясом - 250тг</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Самса" data-price="250">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Бауырсак -->
+            <div class="menu-item">
+                <img src="https://i.obozrevatel.com/food/recipemain/2020/1/3/85981fed2c0586cebbf3817e06b48407.jpg?size=636x424" alt="Бауырсак" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Бауырсак</h3>
+                        <div class="item-price">1кг - 1100тг</div>
+                    </div>
+                    <p class="item-description">Традиционные казахские пончики</p>
+                    <p class="item-ingredients">Мука, дрожжи, молоко, яйца, сахар, масло растительное</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Бауырсак (1кг)" data-price="1100">Заказать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Супы -->
+    <section class="menu-section" id="soups">
+        <h2 class="section-title animate-slide-in-left">Супы</h2>
+        
+        <div class="menu-grid stagger-animation">
+            <!-- Казахский суп -->
+            <div class="menu-item">
+                <img src="https://avatars.mds.yandex.net/get-eda/13058477/593fc5e1afee41b6bc696ebb3cd5759e/M_height" alt="Казахский суп" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Казахский суп</h3>
+                        <div class="item-price">500тг</div>
+                    </div>
+                    <p class="item-description">Наваристый традиционный казахский суп</p>
+                    <p class="item-ingredients">Мясо, картофель, морковь, лук, лапша, зелень</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Казахский суп" data-price="500">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Суп по домашнему -->
+            <div class="menu-item">
+                <img src="https://vilkin.pro/wp-content/uploads/2019/03/sup-lapsha-s-kuricei-16.jpg" alt="Суп по домашнему" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Суп по домашнему</h3>
+                        <div class="item-price">500тг</div>
+                    </div>
+                    <p class="item-description">Ароматный суп с лапшой и курицей</p>
+                    <p class="item-ingredients">Курица, лапша, морковь, лук, зелень, специи</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Суп по домашнему" data-price="500">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Эзогелин -->
+            <div class="menu-item">
+                <img src="https://img.freepik.com/premium-photo/traditional-delicious-turkish-soup-turkish-name-tarhana-ezogelin-corbasi_693630-16564.jpg" alt="Эзогелин" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Эзогелин</h3>
+                        <div class="item-price">400тг</div>
+                    </div>
+                    <p class="item-description">Традиционный турецкий суп из чечевицы</p>
+                    <p class="item-ingredients">Красная чечевица, лук, морковь, томатная паста, специи</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Эзогелин" data-price="400">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Куринный суп -->
+            <div class="menu-item">
+                <img src="https://menunedeli.ru/wp-content/uploads/2020/04/Kuriniy-sup-za-15-minut-500x350-1000x700.jpg" alt="Куринный суп" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Куринный суп</h3>
+                        <div class="item-price">500тг</div>
+                    </div>
+                    <p class="item-description">Наваристый куриный суп с овощами</p>
+                    <p class="item-ingredients">Курица, картофель, морковь, лук, вермишель, зелень</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Куринный суп" data-price="500">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Чечевичный суп -->
+            <div class="menu-item">
+                <img src="https://i.ytimg.com/vi/Xs2mW_2fzlY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBOcF6ufolgfT6MTwN8JjIFBPE3JA" alt="Чечевичный суп" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Чечевичный суп</h3>
+                        <div class="item-price">400тг</div>
+                    </div>
+                    <p class="item-description">Питательный суп из чечевицы</p>
+                    <p class="item-ingredients">Чечевица, морковь, лук, картофель, томаты, специи</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Чечевичный суп" data-price="400">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Кефирный суп -->
+            <div class="menu-item">
+                <img src="https://st2.depositphotos.com/20650114/44213/i/450/depositphotos_442136820-stock-photo-yayla-soup-turkish-yoghurt-soup.jpg" alt="Кефирный суп" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Кефирный суп</h3>
+                        <div class="item-price">400тг</div>
+                    </div>
+                    <p class="item-description">Освежающий холодный суп на кефире</p>
+                    <p class="item-ingredients">Кефир, огурцы, укроп, зеленый лук, яйца</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Кефирный суп" data-price="400">Заказать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Салаты -->
+    <section class="menu-section" id="salads">
+        <h2 class="section-title animate-slide-in-left">Салаты</h2>
+        
+        <div class="menu-grid stagger-animation">
+            <!-- Свежий Салат -->
+            <div class="menu-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo3i72qqP8wyupGtY5OD0qji1SxBFkO_-1eQ&s" alt="Свежий Салат" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Свежий Салат</h3>
+                        <div class="item-price">1450тг</div>
+                    </div>
+                    <p class="item-description">Легкий и освежающий овощной салат</p>
+                    <p class="item-ingredients">Помидоры, огурцы, перец, лук, зелень, оливковое масло</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Свежий Салат" data-price="1450">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Чобан Салат -->
+            <div class="menu-item">
+                <img src="https://menu.xochu-shashlik.ru/wp-content/uploads/2023/12/choban-salat-8-e1578923624498-scaled-4-600x394.jpg" alt="Чобан Салат" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Чобан Салат</h3>
+                        <div class="item-price">1450тг</div>
+                    </div>
+                    <p class="item-description">Традиционный турецкий салат "Пастуший"</p>
+                    <p class="item-ingredients">Помидоры, огурцы, перец, лук, сыр, оливки, зелень</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Чобан Салат" data-price="1450">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            
+
+
+            <!-- Цезарь Салат -->
+            <div class="menu-item">
+                <img src="https://images.gastronom.ru/-UHzDgNx-m0MMa6OR0ilz2qP7MB0mKQeGceObc9jpck/pr:recipe-cover-image/g:ce/rs:auto:0:0:0/L2Ntcy9hbGwtaW1hZ2VzLzVhNzFhZGY1LTM3MTYtNDlmMy04NDNlLTAwMTg4MGNiM2E0OS5qcGc.webp" alt="Цезарь Салат" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Цезарь Салат</h3>
+                        <div class="item-price">1850тг</div>
+                    </div>
+                    <p class="item-description">Классический салат Цезарь с курицей</p>
+                    <p class="item-ingredients">Листья салата, курица, сухарики, пармезан, соус Цезарь</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Цезарь Салат" data-price="1850">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Греческий Салат -->
+            <div class="menu-item">
+                <img src="https://cdn.nur.kz/images/1200x675/67784abd2b04b18b.jpeg" alt="Греческий Салат" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Греческий Салат</h3>
+                        <div class="item-price">1750тг</div>
+                    </div>
+                    <p class="item-description">Классический греческий салат</p>
+                    <p class="item-ingredients">Помидоры, огурцы, перец, лук, оливки, сыр фета, орегано</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Греческий Салат" data-price="1750">Заказать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Основные блюда -->
+    <section class="menu-section" id="mains">
+        <h2 class="section-title animate-slide-in-left">Основные блюда</h2>
+        
+        <div class="menu-grid stagger-animation">
+            <!-- Куырдак -->
+            <div class="menu-item">
+                <img src="https://recipesjunkie.com/wp-content/uploads/2024/06/garlic-butter-beef-potatoes.jpeg" alt="Куырдак" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Куырдак</h3>
+                        <div class="item-price">3500тг</div>
+                    </div>
+                    <p class="item-description">Жаркое из субпродуктов с картофелем и луком</p>
+                    <p class="item-ingredients">Сердце, печень, легкое, картофель, лук, перец, специи. В комплекте: компот или каркаде, салат, хлеб</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Куырдак" data-price="3500">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Узбекский Плов -->
+            <div class="menu-item">
+                <img src="https://s1.eda.ru/StaticContent/Photos/120131082439/160124115932/p_O.jpg" alt="Узбекский Плов" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Узбекский Плов</h3>
+                        <div class="item-price">2500тг</div>
+                    </div>
+                    <p class="item-description">Ароматный плов с бараниной и морковью</p>
+                    <p class="item-ingredients">Рис, баранина, морковь, лук, чеснок, зира, барбарис. В комплекте: компот или каркаде, салат, хлеб</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Узбекский Плов" data-price="2500">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Гувеч -->
+            <div class="menu-item">
+                <img src="https://img.freepik.com/premium-photo/top-view-turkish-dish-guvech-baked-meat-with-eggplant-traditionally-served-earthenware-pot-turkish-name-etli-patlican-guvec_693630-1808.jpg" alt="Гувеч" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Гувеч</h3>
+                        <div class="item-price">4000тг</div>
+                    </div>
+                    <p class="item-description">Турецкое рагу с мясом и овощами</p>
+                    <p class="item-ingredients">Мясо, баклажаны, перец, помидоры, лук, специи. В комплекте: рис, компот или каркаде, салат, хлеб</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Гувеч" data-price="4000">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Манты -->
+            <div class="menu-item">
+                <img src="https://media.ovkuse.ru/images/recipes/d54aec56-b131-437b-822d-88958024e02c/d54aec56-b131-437b-822d-88958024e02c.jpg" alt="Манты" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Манты</h3>
+                        <div class="item-price">5шт - 1250тг</div>
+                    </div>
+                    <p class="item-description">Традиционные среднеазиатские пельмени</p>
+                    <p class="item-ingredients">Тесто, мясной фарш, лук, специи</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Манты (5шт)" data-price="1250">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Маклюбе с казы и кониной -->
+            <div class="menu-item">
+                <img src="./images/маклюбе с казы.jpeg" alt="Маклюбе с казы и кониной" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Маклюбе с казы и кониной</h3>
+                        <div class="item-price">2700тг</div>
+                    </div>
+                    <p class="item-description">Традиционное арабское блюдо с мясом</p>
+                    <p class="item-ingredients">Рис, казы, конина, овощи, специи. В комплекте: компот или каркаде, салат, хлеб, кефир</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Маклюбе с казы и кониной" data-price="2700">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Маклюбе -->
+            <div class="menu-item">
+                <img src="./images/маклюбе.jpeg" alt="Маклюбе" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Маклюбе</h3>
+                        <div class="item-price">2500тг</div>
+                    </div>
+                    <p class="item-description">Традиционное арабское блюдо</p>
+                    <p class="item-ingredients">Рис, овощи, специи. В комплекте: компот или каркаде, салат, хлеб, кефир</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Маклюбе" data-price="2500">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Козы Тандыр -->
+            <div class="menu-item">
+                <img src="./images/козы тандыр.jpeg" alt="Козы Тандыр" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Козы Тандыр</h3>
+                        <div class="item-price">4500тг</div>
+                    </div>
+                    <p class="item-description">Баранина, запеченная в тандыре</p>
+                    <p class="item-ingredients">Баранина, специи. В комплекте: рис, компот или каркаде, салат, хлеб</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Козы Тандыр" data-price="4500">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Курица в печи -->
+            <div class="menu-item">
+                <img src="https://www.edimdoma.ru/system/images/contents/0000/4809/wide/AdobeStock_93193976.jpg?1552991617" alt="Курица в печи" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Курица в печи</h3>
+                        <div class="item-price">8000тг</div>
+                    </div>
+                    <p class="item-description">Цыпленок, запеченный в печи с травами</p>
+                    <p class="item-ingredients">Курица, травы, специи. В комплекте: компот или каркаде, салат, хлеб</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Курица в печи" data-price="8000">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Бесбармак -->
+            <div class="menu-item">
+                <img src="https://ulysmedia.kz/cache/imagine/1200/uploads/news/2025/01/01/677562c46897b398447488.png" alt="Бесбармак" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Бесбармак</h3>
+                        <div class="item-price">4000тг</div>
+                    </div>
+                    <p class="item-description">Традиционное казахское блюдо</p>
+                    <p class="item-ingredients">Мясо, лапша, лук. В комплекте: компот или каркаде, салат, хлеб. Конина - 4500тг</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Бесбармак" data-price="4000">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Шахплов -->
+            <div class="menu-item">
+                <img src="https://www.gorodche.ru/wp-content/uploads/2022/10/63582b5ad4b56-1666722725-63582b5ad4b4e063215.jpg" alt="Шахплов" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Шахплов</h3>
+                        <div class="item-price">3500тг</div>
+                    </div>
+                    <p class="item-description">Праздничный плов с мясом и сухофруктами</p>
+                    <p class="item-ingredients">Рис, мясо, морковь, сухофрукты, специи. В комплекте: компот или каркаде, салат, хлеб</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Шахплов" data-price="3500">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Сірне -->
+            <div class="menu-item">
+                <img src="https://images.satu.kz/175838375_w600_h600_175838375.jpg" alt="Сірне" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Сірне</h3>
+                        <div class="item-price">3800тг</div>
+                    </div>
+                    <p class="item-description">Традиционное казахское жаркое</p>
+                    <p class="item-ingredients">Мясо, картофель, лук, морковь, специи. В комплекте: компот или каркаде, салат, хлеб</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Сірне" data-price="3800">Заказать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Десерты -->
+    <section class="menu-section" id="desserts">
+        <h2 class="section-title animate-slide-in-left">Десерты</h2>
+        
+        <div class="menu-grid stagger-animation">
+            <!-- Реване -->
+            <div class="menu-item">
+                <img src="https://avatars.dzeninfra.ru/get-zen_doc/61795/pub_5d06489cc030570d67802bc2_5d0648ce24ccb50dc611d299/scale_1200" alt="Реване" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Реване</h3>
+                        <div class="item-price">250тг</div>
+                    </div>
+                    <p class="item-description">Турецкий манный пирог в сиропе</p>
+                    <p class="item-ingredients">Манная крупа, мука, яйца, сахар, лимонный сок</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Реване" data-price="250">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Шекерпаре -->
+            <div class="menu-item">
+                <img src="https://static.tildacdn.com/tild3234-3139-4565-b463-363337346135/7.jpg" alt="Шекерпаре" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Шекерпаре</h3>
+                        <div class="item-price">250тг</div>
+                    </div>
+                    <p class="item-description">Турецкое печенье в сахарном сиропе</p>
+                    <p class="item-ingredients">Мука, масло, яйца, сахар, лимонный сок</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Шекерпаре" data-price="250">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ислак Кек -->
+            <div class="menu-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeEpPgX3Xn2XIoula54GV232s3E4MVykCOL-TCzb81KHgWwRVz8SIScStEQzad-z0j7xI&usqp=CAU" alt="Ислак Кек" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Ислак Кек</h3>
+                        <div class="item-price">250тг</div>
+                    </div>
+                    <p class="item-description">Влажный турецкий кек с орехами</p>
+                    <p class="item-ingredients">Мука, яйца, сахар, орехи, масло, разрыхлитель</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Ислак Кек" data-price="250">Заказать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Напитки -->
+    <section class="menu-section" id="drinks">
+        <h2 class="section-title animate-slide-in-left">Напитки</h2>
+        
+        <div class="menu-grid stagger-animation">
+            <!-- Компот -->
+            <div class="menu-item">
+                <img src="https://img.delovcusa.com/2015/02/Kompot-iz-shipovnika.jpg" alt="Компот" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Компот</h3>
+                        <div class="item-price">1л - 575тг</div>
+                    </div>
+                    <p class="item-description">Освежающий компот из свежих фруктов</p>
+                    <p class="item-ingredients">Свежие фрукты, сахар, вода</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Компот (1л)" data-price="575">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Каркаде -->
+            <div class="menu-item">
+                <img src="https://www.rusteaco.ru/upload/medialibrary/9e2/9e2aa1acf0e8bd017f3ca738296a10e1.jpg" alt="Каркаде" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Каркаде</h3>
+                        <div class="item-price">1л - 575тг</div>
+                    </div>
+                    <p class="item-description">Тонизирующий напиток из цветков гибискуса</p>
+                    <p class="item-ingredients">Цветки гибискуса, сахар, вода</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Каркаде (1л)" data-price="575">Заказать</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Лимонад -->
+            <div class="menu-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2sVlKGkQ05pEgQBpfIBjzlXJ3qLQVWyuII5tsFv9Y6DjBmpz63zx7uzpFtAkrk84fTyw&usqp=CAU" alt="Лимонад" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Лимонад</h3>
+                        <div class="item-price">1л - 650тг</div>
+                    </div>
+                    <p class="item-description">Освежающий домашний лимонад</p>
+                    <p class="item-ingredients">Лимоны, сахар, мята, вода</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Лимонад (1л)" data-price="650">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Чай -->
+            <div class="menu-item">
+                <img src="https://www.chay.info/upload/medialibrary/ed2/xh10qhsy10y2od7pdva4g23pln9hit6u.jpeg" alt="Чай" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Чай</h3>
+                        <div class="item-price">Чайник - 400тг</div>
+                    </div>
+                    <p class="item-description">Ароматный чай</p>
+                    <p class="item-ingredients">Чай с молоком - 500тг</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Чай (чайник)" data-price="400">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Турецкий Чай -->
+            <div class="menu-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaB3YRMi6Ucf0i5Uf2iwsqZWzUa6jW613q53gc4UqxA1dSKU4eO_H_JLtf-TYzq1O8iC0&usqp=CAU" alt="Турецкий Чай" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h3 class="item-name">Турецкий Чай</h3>
+                        <div class="item-price">Чайник - 1000тг</div>
+                    </div>
+                    <p class="item-description">Ароматный турецкий чай</p>
+                    <p class="item-ingredients">Турецкий чай, сахар</p>
+                    <div class="item-footer">
+                        <div class="available-badge">Доступно</div>
+                        <button class="order-btn" data-item="Турецкий Чай (чайник)" data-price="1000">Заказать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="https://ugc.production.linktr.ee/537a58f3-fbd1-411f-82a2-eee46d77b587_Functions---Catering.png" alt="ASYL CATERING">
+                <h2 class="footer-title">ASYL CATERING</h2>
+                <p class="footer-subtitle">Дәстүрлі және заманауи асхана</p>
+                <p>Әрбір тағам — бұл шынайы махаббат пен сапаның үйлесімі.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Меню</h3>
+                <ul>
+                    <li><a href="#breakfast">Завтраки</a></li>
+                    <li><a href="#extras">Экстра</a></li>
+                    <li><a href="#bakery">Выпечка</a></li>
+                    <li><a href="#soups">Супы</a></li>
+                    <li><a href="#mains">Основные блюда</a></li>
+                    <li><a href="#desserts">Десерты</a></li>
+                    <li><a href="#drinks">Напитки</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Контакты</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <div>+7 771 349 33 98</div>
+                            <div style="font-size: 0.9rem; opacity: 0.8;">WhatsApp</div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>Казахстан</div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>Ежедневно 9:00 - 22:00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2023 ASYL CATERING. Все права защищены.
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/+77713493398?text=Сәлеметсізбе!%20Мен%20заказ%20бергім%20келеді." class="whatsapp-float" id="whatsappFloat">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+  <script src="./script.js"></script>
+</body>
+</html>
