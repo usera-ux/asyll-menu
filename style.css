@@ -886,7 +886,6 @@
         .modal-btn {
             padding: 10px 20px;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s ease;
@@ -895,11 +894,13 @@
         .modal-btn.confirm {
             background: #25D366;
             color: white;
+            border-radius: 10px;
         }
 
         .modal-btn.cancel {
-            background: #e74c3c;
+            background: #e46354;
             color: white;
+            border-radius: 10px;
         }
 
         .modal-btn:hover {
